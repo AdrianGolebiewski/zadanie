@@ -6,9 +6,20 @@ const sendBtn = document.querySelector('.send');
 
 
 
+const checkForm = input => {
+    console.log(input);
+
+    if(input.value === ''){
+        console.log('błąd');
+    }
+}
+
 
 sendBtn.addEventListener('click', e => {
     e.preventDefault()
+    
+    checkForm([userbook,userauthor])
+
 
   
  
