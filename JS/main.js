@@ -7,11 +7,14 @@ const sendBtn = document.querySelector('.send');
 
 
 const checkForm = input => {
-    console.log(input);
-
-    if(input.value === ''){
-        console.log('błąd');
-    }
+   input.forEach(el => {
+       if(el.value === ''){
+           console.log('Ziom musisz coś wpisać');
+       }else {
+           console.log('ok');
+       }
+       
+   });
 }
 
 
