@@ -33,9 +33,11 @@ sendBtn.addEventListener('click', e => {
 })
 
 const addBook = () =>{
-if(userauthor.value !=='' || userbook.value !==''){
+if(userauthor.value !=='' || userbook.value !=='' && types.options){
     error.style.visibility = 'hidden'
 
+
+   
 }
     else {
         error.style.visibility = 'visible'
