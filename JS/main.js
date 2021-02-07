@@ -1,8 +1,12 @@
+let $todoInput;
+let $newBook; 
+
 const userauthor = document.querySelector('#userauthor');
 const userbook = document.querySelector('#userbook');
 const readingpriority = document.querySelector('#readingpriority');
 const types = document.querySelector('#types');
 const sendBtn = document.querySelector('.send');
+const error = document.querySelector('.error');
 
 
 
@@ -11,7 +15,7 @@ const checkForm = input => {
        if(el.value === ''){
            console.log('Ziom musisz coś wpisać');
        }else {
-           console.log('ok');
+           console.log('object');
        }
        
    });
@@ -28,12 +32,16 @@ sendBtn.addEventListener('click', e => {
  
 })
 
+const addBook = () =>{
+if(userauthor.value !=='' || userbook.value !==''){
+    error.style.visibility = 'hidden'
+
+}
+    else {
+        error.style.visibility = 'visible'
+    }
+
+}
 
 
-clearBtn.addEventListener('click', e => {
-    e.preventDefault()
-
-   
- 
-})
-
+sendBtn.addEventListener('click', addBook)
